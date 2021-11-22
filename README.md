@@ -49,11 +49,11 @@ Step 4. Model Inference
 ```
 총 5개의 모델에 대해서 평가 작업 수행
 
-kpfBERT base (https://github.com/KPFBERT/kpfbert)
-KLUE BERT base (https://huggingface.co/klue/bert-base)
-ETRI BERT base (KorBERT, https://aiopen.etri.re.kr/service_dataset.php)
-KoBERT (https://github.com/SKTBrain/KoBERT)
-BERT base multilingual cased (https://huggingface.co/bert-base-multilingual-cased)
+* kpfBERT base (https://github.com/KPFBERT/kpfbert)
+* KLUE BERT base (https://huggingface.co/klue/bert-base)
+* ETRI BERT base (KorBERT, https://aiopen.etri.re.kr/service_dataset.php)
+* KoBERT (https://github.com/SKTBrain/KoBERT)
+* BERT base multilingual cased (https://huggingface.co/bert-base-multilingual-cased)
 
 Sequence Classification 성능 측정 결과 비교 (10/22/2021):
 | 구분 | NSMC | KLUE-NLI | KLUE-STS |
