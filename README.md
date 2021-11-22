@@ -47,6 +47,13 @@ Step 4. Model Inference
           [-4.1386e-01,  7.3167e-01,  1.1776e+00,  ...,  1.2273e+00, -4.1259e-01,  2.5745e-03]]], 
           grad_fn=<NativeLayerNormBackward>), None)
 ```
+총 5개의 모델에 대해서 평가 작업 수행
+
+kpfBERT base (https://github.com/KPFBERT/kpfbert)
+KLUE BERT base (https://huggingface.co/klue/bert-base)
+ETRI BERT base (KorBERT, https://aiopen.etri.re.kr/service_dataset.php)
+KoBERT (https://github.com/SKTBrain/KoBERT)
+BERT base multilingual cased (https://huggingface.co/bert-base-multilingual-cased)
 
 Sequence Classification 성능 측정 결과 비교 (10/22/2021):
 | 구분 | NSMC | KLUE-NLI | KLUE-STS |
