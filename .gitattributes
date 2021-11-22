@@ -1,0 +1,2 @@
+pytorch_model.bin filter=lfs diff=lfs merge=lfs -text
+tf_model.h5 filter=lfs diff=lfs merge=lfs -text
