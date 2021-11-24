@@ -59,6 +59,7 @@ tokenizer = BertTokenizer.from_pretrained(model_name_or_path
 * BERT base multilingual cased (https://huggingface.co/bert-base-multilingual-cased)
 
 ### Sequence Classification 성능 측정 결과 비교 (10/22/2021):
+
 | 구분 | NSMC | KLUE-NLI | KLUE-STS |
 | :---       |     :---      |     :---      |    :---     |
 | 데이터 특징 및 규격 | 영화 리뷰 감점 분석,<br> 학습 150,000 문장,<br> 평가: 50,000문장 | 자연어 추론,<br> 학습: 24,998 문장<br> 평가: 3,000 문장 (dev셋) | 문장 의미적 유사도 측정,<br> 학습: 11,668 문장<br> 평가: 519 문장 (dev셋) |
@@ -70,6 +71,7 @@ tokenizer = BertTokenizer.from_pretrained(model_name_or_path
 | BERT base multilingual    | 87.33%       | 73.30%    | 85.66 %    |
 
 ### Question Answering 성능 측정 결과 비교 (10/22/2021):
+
 | 구분 | KorQuAD v1 | KLUE-MRC |
 | :---       |     :---      |      :---       |
 | 데이터 특징 및 규격 | 기계독해,<br> 학습: 60,406 건<br> 평가: 5,774 건 (dev셋) | 기계독해,<br> 학습: 17,554 건<br> 평가: 5,841 건 (dev셋) |
