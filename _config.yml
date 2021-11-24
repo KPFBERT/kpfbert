@@ -4,5 +4,7 @@ plugins:
 
 title: [KPF BERT]
 description: [KPF BERT 소개자료]
+url: "https://kpfbert.github.io/kpfbert/"
+markdown: kramdown
 
 google_analytics: [G-0TXTER2CXK]
