@@ -3,16 +3,14 @@
 ## 사용방법
 
 ### Step 1. Installation
-
-python>3.6 이어야 함
-```
+`python>3.6` 이어야 함
+```bash
 pip3 install torch>=1.4.0
 pip3 install transformer>=4.9.2
 ```
 
 ### Step 2. Load Tokenizer, Model
-
-```
+```python
 from transformers import BertModel, BertTokenizer
 
 model_name_or_path = "LOCAL_MODEL_PATH"  # Bert 바이너리가 포함된 디렉토리
@@ -22,7 +20,7 @@ tokenizer = BertTokenizer.from_pretrained(model_name_or_path
 ```
 
 ### Step 3. Tokenizer
-```
+```python
 >>> text = "언론진흥재단 BERT 모델을 공개합니다."
 >>> tokenizer.tokenize(text)
 ['언론', '##진흥', '##재단', 'BE', '##RT', '모델', '##을', '공개', '##합니다', '.']
@@ -34,8 +32,7 @@ tokenizer = BertTokenizer.from_pretrained(model_name_or_path
 ```
 
 ### Step 4. Model Inference
-
-```
+```python
 >>> import torch
 >>> model.eval()
 >>> pt_encoded_input = tokenizer(text, return_tensors="pt")
@@ -59,6 +56,7 @@ tokenizer = BertTokenizer.from_pretrained(model_name_or_path
 * BERT base multilingual cased (https://huggingface.co/bert-base-multilingual-cased)
 
 ### Sequence Classification 성능 측정 결과 비교 (10/22/2021):
+
 | 구분 | NSMC | KLUE-NLI | KLUE-STS |
 | :---       |     :---      |     :---      |    :---     |
 | 데이터 특징 및 규격 | 영화 리뷰 감점 분석, 학습 150,000 문장, 평가: 50,000문장 | 자연어 추론, 학습: 24,998 문장 평가: 3,000 문장 (dev셋) | 문장 의미적 유사도 측정, 학습: 11,668 문장 평가: 519 문장 (dev셋) |
@@ -70,6 +68,7 @@ tokenizer = BertTokenizer.from_pretrained(model_name_or_path
 | BERT base multilingual    | 87.33%       | 73.30%    | 85.66 %    |
 
 ### Question Answering 성능 측정 결과 비교 (10/22/2021):
+
 | 구분 | KorQuAD v1 | KLUE-MRC |
 | :---       |     :---      |      :---       |
 | 데이터 특징 및 규격 | 기계독해, 학습: 60,406 건 평가: 5,774 건 (dev셋) | 기계독해, 학습: 17,554 건 평가: 5,841 건 (dev셋) |
@@ -79,4 +78,3 @@ tokenizer = BertTokenizer.from_pretrained(model_name_or_path
 | KorBERT Tokenizer | 20.11% / 82.00% | 30.56% / 58.59% |
 | KoBERT     | 16.85% / 71.36% | 28.56% / 42.06 % |
 | BERT base multilingual    | 68.10% / 90.02% | 44.58% / 55.92% |
-
