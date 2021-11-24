@@ -4,15 +4,15 @@
 
 ### Step 1. Installation
 
-python>3.6 이어야 함
-```
+`python>3.6` 이어야 함
+```bash
 pip3 install torch>=1.4.0
 pip3 install transformer>=4.9.2
 ```
 
 ### Step 2. Load Tokenizer, Model
 
-```
+```python
 from transformers import BertModel, BertTokenizer
 
 model_name_or_path = "LOCAL_MODEL_PATH"  # Bert 바이너리가 포함된 디렉토리
@@ -22,7 +22,7 @@ tokenizer = BertTokenizer.from_pretrained(model_name_or_path
 ```
 
 ### Step 3. Tokenizer
-```
+```python
 >>> text = "언론진흥재단 BERT 모델을 공개합니다."
 >>> tokenizer.tokenize(text)
 ['언론', '##진흥', '##재단', 'BE', '##RT', '모델', '##을', '공개', '##합니다', '.']
@@ -35,7 +35,7 @@ tokenizer = BertTokenizer.from_pretrained(model_name_or_path
 
 ### Step 4. Model Inference
 
-```
+```python
 >>> import torch
 >>> model.eval()
 >>> pt_encoded_input = tokenizer(text, return_tensors="pt")
