@@ -85,3 +85,4 @@ tokenizer = BertTokenizer.from_pretrained(model_name_or_path
   - KpfBertSum은 Bert 사전학습 모델을 이용한 텍스트 요약 논문 및 모델인 PRESUMM모델을 참조하여 한국어 문장의 요약추출을 구현한 한국어 요약 모델이다.
   - 한국언론진흥재단에서 구축한 방대한 뉴스기사 코퍼스로 학습한 kpfBERT를 이용하여 특히 뉴스기사 요약에 특화된 모델이다.
 
+* YouTube 'BERT란 무엇인가' 설명 링크 https://youtu.be/Pj6563CAnKs
